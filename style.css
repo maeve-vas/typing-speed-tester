@@ -1,0 +1,275 @@
+:root {
+    --bg-dark: #121212;
+    --fg-dark: #e0e0e0;
+    --accent-teal: #0d9488;
+    --bg-light: #ffffff;
+    --fg-light: #000000;
+    --accent-light: #14b8a6;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: var(--bg-dark);
+    color: var(--fg-dark);
+    transition: background 0.3s, color 0.3s;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body.light-theme {
+    background: var(--bg-light);
+    color: var(--fg-light);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+.theme-toggle button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--fg-dark);
+    transition: color 0.3s;
+}
+
+body.light-theme .theme-toggle button {
+    color: var(--fg-light);
+}
+
+/* General Views */
+.view { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100%; 
+    position: relative;
+}
+
+.hidden { display: none; }
+
+/* Gradient Background */
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 25%, #fbc2eb 50%, #a6c1ee 75%, #c2e9fb 100%);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+body.light-theme .gradient-overlay {
+    opacity: 0.3;
+}
+
+/* Landing Content */
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Logo */
+.logo {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.logo-typing {
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    color: var(--accent-teal);
+}
+
+.logo-master {
+    font-weight: 700;
+    color: var(--accent-teal);
+}
+
+body.light-theme .logo-typing,
+body.light-theme .logo-master {
+    color: var(--accent-light);
+}
+
+/* Intro Box */
+.intro {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+    background: rgba(13,148,136,0.1);
+    border-left: 4px solid var(--accent-teal);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+body.light-theme .intro {
+    background: rgba(20,184,166,0.1);
+    border-left-color: var(--accent-light);
+}
+
+/* Main Topic Buttons */
+.topics {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.topic-btn {
+    padding: 1rem 2rem;
+    border: 2px solid var(--accent-teal);
+    background: rgba(13,148,136,0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: var(--accent-teal);
+    letter-spacing: 0.5px;
+}
+
+.topic-btn:hover {
+    background: var(--accent-teal);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(13,148,136,0.3);
+}
+
+body.light-theme .topic-btn {
+    border-color: var(--accent-light);
+    background: rgba(20,184,166,0.05);
+    color: var(--accent-light);
+}
+
+body.light-theme .topic-btn:hover {
+    background: var(--accent-light);
+    color: white;
+    box-shadow: 0 4px 10px rgba(20,184,166,0.3);
+}
+
+/* Back Button */
+.back-btn {
+    align-self: flex-start;
+    margin: 1rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--accent-teal);
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+body.light-theme .back-btn {
+    color: var(--accent-light);
+}
+
+/* Subtopic Buttons */
+.subtopics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+    max-height: 25%;
+    overflow-y: auto;
+}
+
+.subtopics button {
+    flex: 1 1 calc(20% - 1rem);
+    padding: 0.5rem;
+    border: 1px solid var(--accent-teal);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    color: var(--accent-teal);
+}
+
+.subtopics button:hover {
+    background: var(--accent-teal);
+    color: white;
+}
+
+/* Light‑theme Subtopic Hover Fix */
+body.light-theme .subtopics button {
+    border-color: var(--accent-light);
+    background: rgba(0,0,0,0.05);
+    color: var(--accent-light);
+}
+
+body.light-theme .subtopics button:hover {
+    background: var(--accent-light);
+    color: white;
+}
+
+/* Typing Container and Box */
+.typing-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.typing-box {
+    width: 80%;
+    height: 60%;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 1rem;
+    overflow-wrap: break-word;
+    outline: none;
+    white-space: pre-wrap;
+    caret-color: transparent;
+    color: var(--fg-dark);
+}
+
+body.light-theme .typing-box {
+    background: rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+    color: var(--fg-light);
+}
+
+/* Metrics Display */
+.stats {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.stats span { font-weight: bold; }
+
+body.light-theme .stats span { color: var(--accent-light); }
+
+body .stats span { color: var(--accent-teal); }
+
+/* Typing Accuracy */
+.rune { color: rgba(255,255,255,0.4); }
+.rune.correct { color: var(--accent-teal); }
+
+body.light-theme .rune { color: rgba(0,0,0,0.3); }
+body.light-theme .rune.correct { color: var(--accent-light); }

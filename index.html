@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme toggle -->
+    <div class="theme-toggle">
+        <button id="toggleTheme">🌙 / ☀️</button>
+    </div>
+
+    <!-- Landing Page -->
+    <section id="landing" class="view">
+        <div class="gradient-overlay"></div>
+        <div class="landing-content">
+            <div class="logo">
+                <span class="logo-typing">Typing</span> <span class="logo-master">Master</span>
+            </div>
+            <p class="intro">Ready to turn your favorite movie, memes and songs into a typing challenge? Let's see if your fingers & keyboard can keep up with the pop culture vibes!</p>
+            <div class="topics">
+                <button class="topic-btn" data-topic="movies">Movies</button>
+                <button class="topic-btn" data-topic="songs">Songs</button>
+                <button class="topic-btn" data-topic="memes">Memes</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic Page -->
+    <section id="topic" class="view hidden">
+        <button id="backBtn" class="back-btn">← Back</button>
+        <div id="subtopics" class="subtopics"></div>
+        <div id="typingContainer" class="typing-container">
+            <div id="typingBox" class="typing-box" tabindex="0"></div>
+        </div>
+        <!-- Metrics Display -->
+        <div id="stats" class="stats">
+            <span id="timer">Time: 0s</span>
+            <span id="wpm">WPM: 0</span>
+            <span id="accuracy">Accuracy: 100%</span>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
