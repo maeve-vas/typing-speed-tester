@@ -76,7 +76,7 @@ const data = {
     },
     {
       title: "Fight Song - Rachel Platten",
-      text: `A motivational anthem about standing up for oneself. It talks about inner strength and refusing to be ignored or discouraged, even when feeling small. Rachel Platten’s empowering lyrics and emotive delivery inspire listeners to push through obstacles and fight for their dreams. The song’s simple yet profound message is that anyone can be their own hero, no matter how hard life gets. "Fight Song" is a declaration of strength and defiance, embodying the spirit of perseverance and hope. It encourages people to take ownership of their life and their future, empowering them to fight for what they believe in.`
+      text: `A motivational anthem about standing up for oneself. It talks about strength and refusing to be ignored or discouraged, even when feeling small. Rachel Platten’s empowering lyrics and emotive delivery inspire listeners to push through obstacles and fight for their dreams. The song’s simple yet profound message is that anyone can be their own hero, no matter how hard life gets. "Fight Song" is a declaration of strength and defiance, embodying the spirit of perseverance and hope. It encourages people to take ownership of their life and their future, empowering them to fight for what they believe in.`
     },
     {
       title: "On Top of the World - Imagine Dragons",
