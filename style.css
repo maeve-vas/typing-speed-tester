@@ -211,7 +211,6 @@ body.light-theme .back-btn {
     color: white;
 }
 
-/* Light‑theme Subtopic Hover Fix */
 body.light-theme .subtopics button {
     border-color: var(--accent-light);
     background: rgba(0,0,0,0.05);
@@ -245,6 +244,11 @@ body.light-theme .subtopics button:hover {
     white-space: pre-wrap;
     caret-color: transparent;
     color: var(--fg-dark);
+    line-height: 1.6;             /* Added for improved line spacing */
+}
+
+.typing-box p {
+    margin: 0.5em 0;              /* Optional: if paragraphs are used */
 }
 
 body.light-theme .typing-box {
